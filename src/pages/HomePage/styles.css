@@ -1,0 +1,87 @@
+.app {
+  margin: 0 auto;
+  max-width:650px;
+  background-color: #efefef;
+  margin: 8vh auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #908f8f;
+  opacity: 1;
+}
+
+.todo-forms {
+  padding-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.todo-list,
+.filter,
+.search {
+  margin: 30px 0 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+
+}
+
+.filter-options div {
+  flex: 1 1 0;
+}
+
+input,
+select {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.complete {
+  background-color: #5cb85c;
+}
+
+.remove {
+  background-color: #d9534f;
+  margin-left: 10px;
+}

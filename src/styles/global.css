@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-image: url("/src/assets/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
