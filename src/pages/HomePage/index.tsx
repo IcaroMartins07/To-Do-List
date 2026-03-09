@@ -9,8 +9,7 @@ import { useTodos } from "@/hooks/useTodos";
 
 import { filterTodos, searchTodos, sortTodos } from "@/services/todoServices";
 
-import "@/pages/HomePage/styles.css";
-import "@/styles/global.css";
+import { AppContainer, Separator, Title } from "./styles";
 
 const HomePage = () => {
   const { todos, addTodo, removeTodo, completeTodo } = useTodos();
@@ -25,9 +24,9 @@ const HomePage = () => {
   );
 
   return (
-    <div className="app">
-      <h1>Lista de Tarefas</h1>
-
+    <AppContainer>
+      <Title>Lista de Tarefas</Title>
+      
       <Search search={search} setSearch={setSearch} />
 
       <Filter
@@ -37,7 +36,7 @@ const HomePage = () => {
         setOrder={setOrder}
       />
 
-      <div className="todo-list">
+      <Separator>
         {filteredTodos.map((todo) => (
           <Todo
             key={todo.id}
@@ -46,10 +45,10 @@ const HomePage = () => {
             completeTodo={completeTodo}
           />
         ))}
-      </div>
+      </Separator>
 
       <TodoForms addTodo={addTodo} />
-    </div>
+    </AppContainer>
   );
 };
 

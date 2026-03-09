@@ -1,3 +1,9 @@
+import {
+  CompleteButton,
+  Paragraph,
+  RemoveButton,
+  TodoContainer,
+} from "@/pages/HomePage/styles";
 import type { TodoType } from "@/types/todoType";
 
 const Todo = ({
@@ -9,27 +15,22 @@ const Todo = ({
   removeTodo: (id: number) => void;
   completeTodo: (id: number) => void;
 }) => {
+  
   return (
-    <div
-      className="todo"
-      style={{ textDecoration: todo.isCompleted ? "line-through" : "none" }}
-    >
+    <TodoContainer isCompleted={todo.isCompleted}>
       <div className="contet">
-        <p>{todo.text}</p>
-        <p className="category">({todo.category})</p>
+        <Paragraph>{todo.text}</Paragraph>
+        <Paragraph className="category">({todo.category})</Paragraph>
       </div>
       <div>
-        <button
-          className={todo.isCompleted ? "complete.undo" : "complete"}
-          onClick={() => completeTodo(todo.id)}
-        >
+        <CompleteButton onClick={() => completeTodo(todo.id)}>
           {todo.isCompleted ? "Desfazer" : "Completar"}
-        </button>
-        <button className="remove" onClick={() => removeTodo(todo.id)}>
+        </CompleteButton>
+        <RemoveButton className="remove" onClick={() => removeTodo(todo.id)}>
           x
-        </button>
+        </RemoveButton>
       </div>
-    </div>
+    </TodoContainer>
   );
 };
 

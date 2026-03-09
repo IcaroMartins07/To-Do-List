@@ -1,3 +1,5 @@
+import { Button, FilterOptions, Paragraph, Select, Separator, Subtitle } from "@/pages/HomePage/styles";
+
 const Filter = ({
   filter,
   setFilter,
@@ -10,24 +12,24 @@ const Filter = ({
   setOrder: (value: string) => void;
 }) => {
   return (
-    <div className="filter">
-      <h2>Filtrar</h2>
-      <div className="filter-options">
+    <Separator>
+      <Subtitle>Filtrar</Subtitle>
+      <FilterOptions>
         <div>
-          <p>Status</p>
-          <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+          <Paragraph>Status</Paragraph>
+          <Select value={filter} onChange={(e) => setFilter(e.target.value)}>
             <option value="all">Todos</option>
             <option value="completed">Completados</option>
             <option value="incomplete">Incompletos</option>
-          </select>
+          </Select>
         </div>
         <div>
-          <p>Ordem Alfabetica</p>
-          <button onClick={() => setOrder("a-z")}>A-Z</button>
-          <button onClick={() => setOrder("z-a")}>Z-A</button>
+          <Paragraph>Ordem Alfabetica</Paragraph>
+          <Button onClick={() => setOrder("a-z")}>A-Z</Button>
+          <Button onClick={() => setOrder("z-a")}>Z-A</Button>
         </div>
-      </div>
-    </div>
+      </FilterOptions>
+    </Separator>
   );
 };
 

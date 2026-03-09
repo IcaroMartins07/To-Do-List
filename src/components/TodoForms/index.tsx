@@ -1,3 +1,10 @@
+import {
+  Button,
+  Input,
+  Select,
+  Subtitle,
+  TodoForm,
+} from "@/pages/HomePage/styles.ts";
 import { useState } from "react";
 
 type TodoFormsProps = {
@@ -8,7 +15,7 @@ const TodoForms = ({ addTodo }: TodoFormsProps) => {
   const [value, setValeue] = useState("");
   const [category, setCategory] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!value || !category) return;
     addTodo(value, category);
@@ -16,25 +23,26 @@ const TodoForms = ({ addTodo }: TodoFormsProps) => {
     setCategory("");
     console.log("Tarefa:", value, "Categoria:", category);
   };
+
   return (
-    <div className="todo-forms">
-      <h2>Adicionar nova tarefa</h2>
+    <TodoForm>
+      <Subtitle>Adicionar nova tarefa</Subtitle>
       <form onSubmit={handleSubmit}>
-        <input
+        <Input
           type="text"
           placeholder="Digite a tarefa"
           value={value}
           onChange={(e) => setValeue(e.target.value)}
         />
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <Select value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="">Selecione uma categoria</option>
           <option value="Trabalho">Trabalho</option>
           <option value="Pessoal">Pessoal</option>
           <option value="Estudos">Estudos</option>
-        </select>
-        <button type="submit">Criar Tarefa</button>
+        </Select>
+        <Button type="submit">Criar Tarefa</Button>
       </form>
-    </div>
+    </TodoForm>
   );
 };
 
