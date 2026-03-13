@@ -1,4 +1,12 @@
-import { Button, FilterOptions, Paragraph, Select, Separator, Subtitle } from "@/pages/HomePage/styles";
+import {
+  Button,
+  ContainerButtons,
+  FilterOptions,
+  Paragraph,
+  Select,
+  Separator,
+  Subtitle,
+} from "@/pages/HomePage/styles";
 
 const Filter = ({
   filter,
@@ -25,8 +33,10 @@ const Filter = ({
         </div>
         <div>
           <Paragraph>Ordem Alfabetica</Paragraph>
-          <Button onClick={() => setOrder("a-z")}>A-Z</Button>
-          <Button onClick={() => setOrder("z-a")}>Z-A</Button>
+          <ContainerButtons>
+            <Button onClick={() => setOrder("a-z")}>A-Z</Button>
+            <Button onClick={() => setOrder("z-a")}>Z-A</Button>
+          </ContainerButtons>
         </div>
       </FilterOptions>
     </Separator>

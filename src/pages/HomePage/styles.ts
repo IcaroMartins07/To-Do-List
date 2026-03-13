@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AppContainer = styled.div`
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 700px;
   background-color: #efefef;
   margin: 8vh auto;
   padding: 20px 30px;
@@ -19,20 +19,6 @@ export const Subtitle = styled.h2`
 
 export const Paragraph = styled.p`
   margin: 10px 0;
-`;
-
-export const Button = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-  button:hover {
-    background-color: #908f8f;
-    opacity: 1;
-  }
 `;
 
 export const TodoForm = styled.div`
@@ -66,6 +52,8 @@ export const FilterOptions = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 3rem;
+  align-items: center;
+  
 
   div {
     flex: 1 1 0;
@@ -77,7 +65,7 @@ export const Input = styled.input`
   margin-right: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 200px;
+  width: 250px;
 `;
 
 export const Select = styled.select`
@@ -85,14 +73,43 @@ export const Select = styled.select`
   margin-right: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 200px;
+  width: 250px;
+`;
+
+export const ContainerButtons = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const Button = styled.button`
+  padding: 10px 20px;
+  background-color: #5093db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    background-color: #007bff;
+    opacity: 0.9;
+  }
 `;
 
 export const CompleteButton = styled(Button)`
   background-color: #5cb85c;
+
+  &:hover {
+    background-color: #12c112;
+  }
 `;
 
 export const RemoveButton = styled(Button)`
   background-color: #d9534f;
-  margin-left: 10px;
+
+  &:hover {
+    background-color: #d0140d;
+  }
 `;

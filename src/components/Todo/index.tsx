@@ -1,5 +1,6 @@
 import {
   CompleteButton,
+  ContainerButtons,
   Paragraph,
   RemoveButton,
   TodoContainer,
@@ -15,21 +16,20 @@ const Todo = ({
   removeTodo: (id: number) => void;
   completeTodo: (id: number) => void;
 }) => {
-  
   return (
     <TodoContainer isCompleted={todo.isCompleted}>
       <div className="contet">
         <Paragraph>{todo.text}</Paragraph>
         <Paragraph className="category">({todo.category})</Paragraph>
       </div>
-      <div>
+      <ContainerButtons>
         <CompleteButton onClick={() => completeTodo(todo.id)}>
           {todo.isCompleted ? "Desfazer" : "Completar"}
         </CompleteButton>
         <RemoveButton className="remove" onClick={() => removeTodo(todo.id)}>
           x
         </RemoveButton>
-      </div>
+      </ContainerButtons>
     </TodoContainer>
   );
 };

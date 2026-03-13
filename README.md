@@ -1,13 +1,14 @@
 # To-Do List
 
-Uma aplicação simples de **lista de tarefas** desenvolvida para praticar conceitos de **React**, **componentização** e **gerenciamento de estado**.
+Uma aplicação simples de **lista de tarefas** desenvolvida para praticar conceitos de **React**, **componentização**, **gerenciamento de estado** e a ultilização de **API**.
 
 ## Tecnologias utilizadas
 
-- React
+- React - Vite
 - TypeScript
-- CSS
-- Vite
+- Styled-Components
+- Axios
+- API jsonplaceholder
 
 ## Funcionalidades
 
@@ -44,4 +45,4 @@ npm run dev
 
 ## Objetivo do projeto
 
-Este projeto foi criado com o objetivo de **praticar desenvolvimento front-end com React e TypeScript**, aplicando conceitos de organização de código, reutilização de componentes e manipulação de estado.
+Este projeto foi criado com o objetivo de **praticar desenvolvimento front-end e back-end com React e TypeScript**, aplicando conceitos de organização de código, reutilização de componentes, manipulação de estado e manipulação de API.
